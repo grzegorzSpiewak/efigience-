@@ -1,0 +1,15 @@
+.consumer {
+  background-color: #d9dada;
+}
+
+.consumer__wrap {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .consumer__wrap {
+    display: flex;
+  }
+}

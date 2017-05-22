@@ -1,0 +1,25 @@
+{
+  "name": "x-team-next",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "postcss --use autoprefixer --use postcss-import --use csswring -d ./next/dist/css/ static/css/main.css",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next && build-css"
+  },
+  "author": "x-team",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^2.3.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "autoprefixer": "^6.3.7",
+    "postcss": "^5.1.1",
+    "postcss-cli": "^2.5.2",
+    "postcss-import": "^8.1.2"
+  },
+  "devDependencies": {
+    "classnames": "^2.2.5"
+  }
+}

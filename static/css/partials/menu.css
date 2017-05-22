@@ -1,0 +1,304 @@
+.menu {
+  background-color: #13bdd2;
+}
+
+.menu__container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/***********************************
+* Menu logo and user picture style *
+***********************************/
+.menu__avatar {
+  display: flex;
+  padding: 5px;
+}
+
+.menu__avatar__logo {
+  flex: 1;
+  background-image: url('../../images/logo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  margin-right: 5px;
+  border: 1px solid #5ad1e0;
+  width: 120px;
+  height: 120px;
+}
+
+.menu__avatar__user {
+  display: none;
+}
+
+/***********************************
+*   Menu user details and icons   *
+***********************************/
+.menu__user {
+  display: none;
+}
+
+.menu__user__name {
+  font-size: 32px;
+  color: #fff;
+  font-weight: lighter;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.menu__user__icons {
+  display: none;
+}
+
+.menu__user__icons__email {
+  margin-right: 20px;
+  position: relative;
+}
+
+.menu__search {
+  display: none;
+}
+
+.notification-recived {
+  position: absolute;
+  top: -25%;
+  left: 75%;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.5em;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #e81c7b;
+  cursor: pointer;
+}
+
+/***********************************
+*        Navigation Mobile         *
+***********************************/
+.menu__toggle {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  cursor: pointer;
+  border: none;
+  text-indent: -999999999px;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  z-index: 1001;
+}
+
+.menu__toggle__line, .menu__toggle:before, .menu__toggle:after {
+  position: absolute;
+  left: 4px;
+  width: 24px;
+  height: 2px;
+  background-color: #fff;
+  content: "";
+}
+.menu__toggle__line {top: 15px;}
+.menu__toggle:before {top: 6px;}
+.menu__toggle:after {bottom: 6px;}
+
+
+/***********************************
+*      Navigation Desktop          *
+***********************************/
+.menu__list {
+  margin-top: 80px;
+	padding: 0;
+}
+
+.menu__item {
+  vertical-align: middle;
+	list-style: none;
+	text-align: center;
+}
+
+.menu__link {
+  position: relative;
+	text-decoration: none;
+	color: #fff;
+	font-size: 40px;
+	line-height: 1.2em; /* 56px */
+}
+
+.menu__link__icon .fa {
+  display: none;
+}
+
+.menu__link__anchor {
+  padding-top: 50px;
+  border-bottom: 1px solid #FFF;
+  padding: 20px;
+}
+
+.menu__link__anchor:hover {
+  background-color: #e81c7b;
+}
+
+
+
+/***********************************
+*            Desktop               *
+***********************************/
+@media (min-width: 1200px) {
+  .menu__avatar__user {
+    display: block;
+    flex: 1;
+    background-image: url('../../images/Jan_Kowalski.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 5px;
+    border: 1px solid #5ad1e0;
+    width: 120px;
+    height: 120px;
+  }
+
+  .menu__user {
+    flex: 1;
+    display: block;
+    margin: 10px;
+  }
+
+  .menu__user__icons {
+    display: block;
+    font-size: 30px;
+    color: #fff;
+  }
+
+  .menu__toggle {
+    display: none;
+  }
+
+  .menu__menubar {
+    flex: 2;
+    display: inline;
+  }
+
+  .menu__list {
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu__item {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+  }
+
+  .menu__item:hover {
+    background-color: black;
+    cursor: pointer;
+  }
+
+  .menu__item:hover::after {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    top: 93%;
+    left: 40%;
+  }
+
+  .menu__link {
+    font-size: 30px;
+    line-height: 1;
+    width: 110px;
+    text-align: center;
+    color: #fff;
+    display: block;
+  }
+
+  .menu__link__icon {
+    margin-top: 50px;
+    margin-bottom: 15px;
+  }
+
+  .menu__link__icon .fa {
+    font-size: 50px;
+    display: block;
+  }
+
+  .menu__link__anchor {
+    font-size: 20px;
+    padding-bottom: 10px;
+    border: none;
+  }
+
+  .menu__link__anchor:hover {
+    background-color: black;
+  }
+
+  .menu__search {
+    display: block;
+    font-size: 40px;
+    color: #fff;
+    padding: 10px;
+  }
+
+  .menu__search__icon {
+    margin-right: 15px;
+    position: relative;
+  }
+
+  .menu__search__icon:after {
+    content: "";
+    width: 1px;
+    height: 80px;
+    background-color: #5ad1e0;
+    z-index: 1000;
+    position: absolute;
+    top: -50%;
+    left: 120%;
+  }
+
+  .menu__search__power {
+    color: #e21a61;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+	/* Hide/Show menu */
+	.menu__menubar {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0; left: 0;
+		padding-top: 3rem; /* logo/burger spacing */
+		transition: transform .3s ease-out;
+		transform: translateY(-100%);
+		background-color: #13bdd2;
+    z-index: 1000;
+	}
+	.body--menu-visible .menu__menubar {
+		transform: translateY(0);
+	}
+
+	.body--menu-visible .menu__toggle {
+		border: none;
+	}
+	.body--menu-visible .menu__toggle:before,
+	.body--menu-visible .menu__toggle:after {
+		width: 30px;
+		left: 0;
+	}
+	.body--menu-visible .menu__toggle:before {
+		transform: rotate(45deg);
+		top: 14px;
+	}
+	.body--menu-visible .menu__toggle:after {
+		transform: rotate(-45deg);
+		bottom: 15px;
+	}
+	.body--menu-visible .menu__toggle__line {
+    display: none;
+  }
+}

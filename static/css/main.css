@@ -1,0 +1,18 @@
+/****************
+* Generat style *
+****************/
+@import './modules/normalize.css';
+@import './modules/layout.css';
+@import './modules/buttons.css';
+@import './modules/checkbox.css';
+
+/****************
+*   Components  *
+****************/
+@import './partials/finance.css';
+@import './partials/graph.css';
+@import './partials/consumer.css';
+@import './partials/history.css';
+@import './partials/menu.css';
+@import './partials/placeholder.css';
+@import './partials/products.css';
